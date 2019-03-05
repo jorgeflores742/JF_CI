@@ -22,21 +22,21 @@ public class ProductsResourceTest {
 
     @Test
     public void listProducts() {
-        assertEquals(null, p.listProducts("hola", pag));
+        assertNotEquals(null, p.listProducts("hola", pag));
     }
 
     @Test
     public void getProduct() {
-        assertEquals(null, p.getProduct(1));
+        assertNotEquals(null, p.getProduct(1));
     }
 
     @Test
     public void createProduct() throws URISyntaxException {
-        assertEquals(null, p.createProduct(prod));
+        assertNotEquals(null, p.createProduct(prod));
     }
 
     @Test
     public void updateProduct() {
-        assertEquals(null, p.updateProduct(prod, 1));
+        assertNotEquals(null, p.updateProduct(prod, 1));
     }
 }
