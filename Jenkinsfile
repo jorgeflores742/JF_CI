@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh './store-webapp-sample-master/gradlew test -p store-webapp-sample-master'
+                sh './store-webapp-sample-master/gradlew check -p store-webapp-sample-master'
                 sh './store-webapp-sample-master/gradlew jacocoTestReport -p store-webapp-sample-master'   
 
                 // Publish the JUnit test Report
@@ -46,7 +47,7 @@ pipeline {
     post {
         always {            
             archiveArtifacts artifacts: 'store-webapp-sample-master/build/libs/**/*.jar', fingerprint: true
-            archiveArtifacts artifacts: 'store-webapp-sample-master/build/libs/**/*.war', fingerprint: true
+            archiveArtifacts artifacts: 'store-webapp-sample-master/build/libs/*.war', fingerprint: true
             junit 'store-webapp-sample-master/build/test-results/**/*.xml'
         }
     }
