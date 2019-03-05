@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh './store-webapp-sample-master/gradlew test -p store-webapp-sample-master'
+                sh './store-webapp-sample-master/gradlew check -p store-webapp-sample-master'
                 sh './store-webapp-sample-master/gradlew jacocoTestReport -p store-webapp-sample-master'   
 
                 // Publish the JUnit test Report
