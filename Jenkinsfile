@@ -30,7 +30,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: 'store-webapp-sample-master/build/jacocoHtml',
+                    reportDir: 'store-webapp-sample-master/build/reports/jacoco',
                     reportFiles: 'index.html',
                     reportName: 'JaCoCo Report'
                   ]                              
