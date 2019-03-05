@@ -47,7 +47,7 @@ pipeline {
     post {
         always {            
             archiveArtifacts artifacts: 'store-webapp-sample-master/build/libs/**/*.jar', fingerprint: true
-            archiveArtifacts artifacts: 'store-webapp-sample-master/build/libs/*.war', fingerprint: true
+            archiveArtifacts artifacts: 'store-webapp-sample-master/build/libs/**/*.war', fingerprint: true
             junit 'store-webapp-sample-master/build/test-results/**/*.xml'
         }
     }
