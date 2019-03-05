@@ -57,3 +57,6 @@ release.properties
 
 #Vim
 *~
+.vagrant
+environment.yml
+*.pem
